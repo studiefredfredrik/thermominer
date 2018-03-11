@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WindowsGui
 {
@@ -21,15 +22,55 @@ namespace WindowsGui
     /// </summary>
     public partial class MainWindow : Window
     {
-        Timer temperatureTime = new Timer(CheckTemperature, new AutoResetEvent(false), 1000, 1000);
+        Timer temperatureTimer = new Timer(
+                CheckTemperature, 
+                new AutoResetEvent(false), 
+                1000, 1000 * 60 * 1
+            );
+        Timer serverTimer = new Timer(
+                PostToServer, 
+                new AutoResetEvent(false), 
+                1000, 1000 * 60 * 5
+            );
+
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         public static void CheckTemperature(Object stateInfo)
         {
 
+        }
+
+        public static void PostToServer(Object stateInfo)
+        {
+
+        }
+
+        private static void WriteToConsole(MainWindow runnerClass, string text)
+        {
+            runnerClass.Dispatcher.Invoke(DispatcherPriority.Normal,
+                new Action(() => {
+                    runnerClass.txtMinerOutput.Text = text;
+                }));
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Settings_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SettingsWindow settings = new SettingsWindow();
+            settings.Show();
         }
     }
 }

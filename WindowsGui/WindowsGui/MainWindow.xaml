@@ -5,30 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsGui"
         mc:Ignorable="d"
-        Title="Thermominer" Height="433.914" Width="585.246">
+        Title="Thermominer" Height="377.971" Width="585.246">
     <Grid>
-        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="11,14,0,0" VerticalAlignment="Top" Width="75" Background="White"/>
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="91,14,0,0" VerticalAlignment="Top" Width="75" Background="White"/>
-        <RichTextBox x:Name="txtMinerOutput" HorizontalAlignment="Left" Height="204" Margin="10,66,0,0" VerticalAlignment="Top" Width="300">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="11,14,0,0" VerticalAlignment="Top" Width="75" Background="White" Click="btnStart_Click"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="91,14,0,0" VerticalAlignment="Top" Width="75" Background="White" Click="btnStop_Click"/>
         <Label Content="Miner output:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top"/>
-        <RichTextBox x:Name="txtHashrates" HorizontalAlignment="Left" Height="204" Margin="315,66,0,0" VerticalAlignment="Top" Width="149">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
         <Label Content="Hashrates:" HorizontalAlignment="Left" Margin="315,43,0,0" VerticalAlignment="Top" Width="102"/>
         <Label Content="Current status:" HorizontalAlignment="Left" Margin="315,4,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblStatus" Content="NOT MINING" HorizontalAlignment="Left" Margin="373,16,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chkTemperatureLimit" Content="Enable temperature limit" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="15" Margin="10,378,0,0" VerticalAlignment="Top" Width="18" Source="gear24px.png" Cursor="Hand"/>
-
+        <Image x:Name="imgSettings" HorizontalAlignment="Left" Height="15" Margin="549,10,0,0" VerticalAlignment="Top" Width="18" Source="gear24px.png" Cursor="Hand" MouseDown="Settings_MouseDown"/>
+        <TextBlock x:Name="txtMinerOutput" HorizontalAlignment="Left" Margin="11,66,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="204" Width="299" Background="#FFEEEEEE"/>
+        <TextBlock x:Name="txtHashrates" HorizontalAlignment="Left" Margin="315,66,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="204" Width="138" Background="#FFEEEEEE"/>
+        <Label Content="Current temperature:" HorizontalAlignment="Left" Margin="11,282,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCurrentTemperature" Content="--" HorizontalAlignment="Left" Margin="145,282,0,0" VerticalAlignment="Top"/>
+        <Label Content="Temperature limit:" HorizontalAlignment="Left" Margin="11,313,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTemperatureLimit" Content="--" HorizontalAlignment="Left" Margin="145,313,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.563"/>
     </Grid>
 </Window>
