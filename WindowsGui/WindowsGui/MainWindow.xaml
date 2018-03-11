@@ -5,20 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsGui"
         mc:Ignorable="d"
-        Title="Thermominer" Height="377.971" Width="585.246">
+        Title="Thermominer" Height="514.957" Width="1011.27">
     <Grid>
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="11,14,0,0" VerticalAlignment="Top" Width="75" Background="White" Click="btnStart_Click"/>
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="91,14,0,0" VerticalAlignment="Top" Width="75" Background="White" Click="btnStop_Click"/>
         <Label Content="Miner output:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="Hashrates:" HorizontalAlignment="Left" Margin="315,43,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Current status:" HorizontalAlignment="Left" Margin="315,4,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblStatus" Content="NOT MINING" HorizontalAlignment="Left" Margin="373,16,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="imgSettings" HorizontalAlignment="Left" Height="15" Margin="549,10,0,0" VerticalAlignment="Top" Width="18" Source="gear24px.png" Cursor="Hand" MouseDown="Settings_MouseDown"/>
-        <TextBlock x:Name="txtMinerOutput" HorizontalAlignment="Left" Margin="11,66,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="204" Width="299" Background="#FFEEEEEE"/>
-        <TextBlock x:Name="txtHashrates" HorizontalAlignment="Left" Margin="315,66,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="204" Width="138" Background="#FFEEEEEE"/>
-        <Label Content="Current temperature:" HorizontalAlignment="Left" Margin="11,282,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblCurrentTemperature" Content="--" HorizontalAlignment="Left" Margin="145,282,0,0" VerticalAlignment="Top"/>
-        <Label Content="Temperature limit:" HorizontalAlignment="Left" Margin="11,313,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblTemperatureLimit" Content="--" HorizontalAlignment="Left" Margin="145,313,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.563"/>
+        <Label Content="Hashrates:" HorizontalAlignment="Left" Margin="727,43,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="Current status:" HorizontalAlignment="Left" Margin="199,4,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblStatus" Content="NOT MINING" HorizontalAlignment="Left" Margin="257,16,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="imgSettings" HorizontalAlignment="Left" Height="15" Margin="721,10,0,0" VerticalAlignment="Top" Width="18" Source="gear24px.png" Cursor="Hand" MouseDown="Settings_MouseDown"/>
+
+        <ScrollViewer Name="minerOutputScrollview" Margin="11,69,0,0" HorizontalAlignment="Left" Width="716" Height="249" VerticalAlignment="Top">
+            <TextBlock x:Name="txtMinerOutput" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top"  Background="#FFEEEEEE"/>
+        </ScrollViewer>
+
+        <ScrollViewer Name="hashrateScrollview" Margin="732,69,0,0" Width="198" Height="249" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock x:Name="txtHashrates" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"  Background="#FFEEEEEE"/>
+        </ScrollViewer>
+
+        <Label Content="Current temperature:" HorizontalAlignment="Left" Margin="12,323,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCurrentTemperature" Content="--" HorizontalAlignment="Left" Margin="146,323,0,0" VerticalAlignment="Top"/>
+        <Label Content="Temperature limit:" HorizontalAlignment="Left" Margin="12,354,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTemperatureLimit" Content="--" HorizontalAlignment="Left" Margin="146,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.563"/>
     </Grid>
 </Window>

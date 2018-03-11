@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Settings" Height="397.131" Width="300">
     <Grid>
-        <CheckBox x:Name="chkTemperatureLimit" Content="Enable temperature limit" HorizontalAlignment="Left" Margin="15,4,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkTemperatureLimit" Content="Enable temperature limit" HorizontalAlignment="Left" Margin="15,4,0,0" IsChecked="{Binding Path=ApplicationState.TemperatureLimitEnabled}" VerticalAlignment="Top" Checked="chkTemperatureLimit_Checked" Unchecked="chkTemperatureLimit_Checked"/>
         <CheckBox x:Name="chkPostToServer" Content="Post temperature and hashrate to server" HorizontalAlignment="Left" Margin="15,172,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cboSensors" HorizontalAlignment="Left" Margin="132,37,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Temperature sensor:" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
-        <Slider HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="211" Maximum="50" Value="25"/>
+        <Slider x:Name="sldrTemperature" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="211" Maximum="50" Value="25"/>
         <Label Content="Temperature limit:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
-        <Label Content="25°C" HorizontalAlignment="Left" Margin="226,88,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTemperatureLimit" Content="25°C" HorizontalAlignment="Left" Margin="226,88,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtUrl" HorizontalAlignment="Left" Height="23" Margin="78,204,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200"/>
         <Label Content="Url:" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top"/>
         <Label Content="Wallet:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top"/>

