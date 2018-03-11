@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NetCoreWebAPI.Controllers
+namespace DotNetCoreWebApi.Controllers
 {
     [Route("api/minerstats")]
     public class MinerstatsController : Controller

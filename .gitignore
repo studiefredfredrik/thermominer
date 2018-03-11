@@ -1,3 +1,6 @@
 .vs/
 DotNetCoreWebApi/NetCoreWebAPI/obj/
 DotNetCoreWebApi/NetCoreWebAPI/bin/
+WindowsGui/WindowsGui/obj/
+WindowsGui/WindowsGui/debug/
+WindowsGui/WindowsGui/bin/

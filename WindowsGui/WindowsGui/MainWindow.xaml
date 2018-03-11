@@ -1,0 +1,34 @@
+﻿<Window x:Class="WindowsGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsGui"
+        mc:Ignorable="d"
+        Title="Thermominer" Height="433.914" Width="585.246">
+    <Grid>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="11,14,0,0" VerticalAlignment="Top" Width="75" Background="White"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="91,14,0,0" VerticalAlignment="Top" Width="75" Background="White"/>
+        <RichTextBox x:Name="txtMinerOutput" HorizontalAlignment="Left" Height="204" Margin="10,66,0,0" VerticalAlignment="Top" Width="300">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="Miner output:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top"/>
+        <RichTextBox x:Name="txtHashrates" HorizontalAlignment="Left" Height="204" Margin="315,66,0,0" VerticalAlignment="Top" Width="149">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="Hashrates:" HorizontalAlignment="Left" Margin="315,43,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="Current status:" HorizontalAlignment="Left" Margin="315,4,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblStatus" Content="NOT MINING" HorizontalAlignment="Left" Margin="373,16,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkTemperatureLimit" Content="Enable temperature limit" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="15" Margin="10,378,0,0" VerticalAlignment="Top" Width="18" Source="gear24px.png" Cursor="Hand"/>
+
+    </Grid>
+</Window>

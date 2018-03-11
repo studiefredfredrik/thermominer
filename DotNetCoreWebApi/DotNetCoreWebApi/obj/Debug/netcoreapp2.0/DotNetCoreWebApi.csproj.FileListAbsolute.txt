@@ -1,0 +1,11 @@
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\bin\Debug\netcoreapp2.0\DotNetCoreWebApi.deps.json
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\bin\Debug\netcoreapp2.0\DotNetCoreWebApi.runtimeconfig.json
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\bin\Debug\netcoreapp2.0\DotNetCoreWebApi.runtimeconfig.dev.json
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\bin\Debug\netcoreapp2.0\DotNetCoreWebApi.dll
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\bin\Debug\netcoreapp2.0\DotNetCoreWebApi.pdb
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\obj\Debug\netcoreapp2.0\DotNetCoreWebApi.csprojResolveAssemblyReference.cache
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\obj\Debug\netcoreapp2.0\DotNetCoreWebApi.csproj.CoreCompileInputs.cache
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\obj\Debug\netcoreapp2.0\DotNetCoreWebApi.AssemblyInfoInputs.cache
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\obj\Debug\netcoreapp2.0\DotNetCoreWebApi.AssemblyInfo.cs
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\obj\Debug\netcoreapp2.0\DotNetCoreWebApi.dll
+C:\Users\fredrik\Documents\thermominer\DotNetCoreWebApi\DotNetCoreWebApi\obj\Debug\netcoreapp2.0\DotNetCoreWebApi.pdb

@@ -1,0 +1,11 @@
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\bin\Debug\netcoreapp2.0\NetCoreWebAPI.deps.json
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\bin\Debug\netcoreapp2.0\NetCoreWebAPI.runtimeconfig.json
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\bin\Debug\netcoreapp2.0\NetCoreWebAPI.runtimeconfig.dev.json
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\bin\Debug\netcoreapp2.0\NetCoreWebAPI.dll
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\bin\Debug\netcoreapp2.0\NetCoreWebAPI.pdb
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\obj\Debug\netcoreapp2.0\NetCoreWebAPI.csprojResolveAssemblyReference.cache
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\obj\Debug\netcoreapp2.0\NetCoreWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\obj\Debug\netcoreapp2.0\NetCoreWebAPI.AssemblyInfoInputs.cache
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\obj\Debug\netcoreapp2.0\NetCoreWebAPI.AssemblyInfo.cs
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\obj\Debug\netcoreapp2.0\NetCoreWebAPI.dll
+C:\Users\fredrik\Documents\hotminer\NetCoreWebAPI\NetCoreWebAPI\obj\Debug\netcoreapp2.0\NetCoreWebAPI.pdb
