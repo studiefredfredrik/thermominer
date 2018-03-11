@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #canvasbox {
+            width: 500px;
+        }
+        .summaryBox {
+            margin: auto;
+            width: 500px;
+            background: #eee;
+            padding: 30px;
+            box-shadow: 10px 10px 5px grey;
+            border: 1px solid #ccc;
+
+        }
+        .summaryTable{
+            margin: auto;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        .summaryTable{
+            text-align: left;
+        }
+        .summaryTable td {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="summaryBox">
+        <table class="summaryTable">
+            <tr>
+                <th>Address</th>
+                <td id="address">--</td>
+            </tr>
+            <tr>
+                <th>Hashrate</th>
+                <td id="currentHashrate">--</td>
+            </tr>
+            <tr>
+                <th>Temperature</th>
+                <td id="currentTemperature">--</td>
+            </tr>
+            <tr>
+                <th>Last update</th>
+                <td id="lastUpdate">--</td>
+            </tr>
+        </table>
+
+        <div id="addressSetter">
+            <input type="text" id="addressInput" />
+            <button id="addressButton">Submit</button>
+        </div>
+        <div id="canvasbox">
+            <canvas id="myChart" width="100" height="50"></canvas>
+            <canvas id="myChart" width="100" height="50"></canvas>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var address = localStorage.getItem("address");
+
+        $("#addressButton").click(function () {
+            localStorage.setItem("address", $("#addressInput").val());
+            location.reload();
+        });
+
+        console.log(address);
+        if (address) {
+            $('#addressSetter').hide();
+        }
+
+        $("#address").click(function () {
+            $('#addressSetter').show();
+        });
+
+        var getterUrl = '/api/minerstats/' + address + '/total';
+        $.get(getterUrl, function (data) {
+            console.log(data);
+            populateForm(data);
+            createChart(data.rigStats);
+        });
+
+        var populateForm = function (data) {
+            $("#address").html(address);
+            $("#currentHashrate").html(data.currentHashrate + ' MH/s');
+            $("#currentTemperature").html(data.currentTemperature + ' ºC');
+            var dateTimeString = moment(data.lastUpdate).format('YYYY-MM-DD, hh:mm:ss');
+            $("#lastUpdate").html(dateTimeString);
+        };
+
+        var createChart = function (rigStats) {
+            if (!rigStats) return;
+            console.log(rigStats);
+            var labelsArr = rigStats[0].temperatures.map(function () { return ''; }); // Chartjs requires label for every point
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labelsArr,
+                    datasets: [
+                        {
+                            label: 'Temperature',
+                            data: rigStats[0].temperatures,
+                            backgroundColor: ['rgba(255, 99, 132, 0.1)'],
+                            borderColor: ['rgba(255,99,132,1)'],
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Hashrate',
+                            data: rigStats[0].hashrates,
+                            backgroundColor: ['rgba(0, 132, 255, 0.1)'],
+                            borderColor: ['rgba(0, 132, 255 ,1)'],
+                            borderWidth: 1
+                        },
+                    ],
+                },
+                options: {
+                    elements: {
+                        point: {
+                            radius: 4
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        };
+
+        createChart();
+
+
+
+
+    </script>
+</body>
+</html>
