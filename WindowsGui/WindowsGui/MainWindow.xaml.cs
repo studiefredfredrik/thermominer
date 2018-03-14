@@ -64,6 +64,10 @@ namespace WindowsGui
 
             if (!File.Exists(pathOfBatFile))
                 File.WriteAllText(pathOfBatFile, Properties.Resources.runner);
+
+            ApplicationState.EthminerDir = pathOfWorkingDir;
+            ApplicationState.EthminerFilePath = pathOfExe;
+            ApplicationState.EthminerBatFilePath = pathOfBatFile;
         }
 
         /// <summary>
@@ -303,7 +307,28 @@ namespace WindowsGui
         private void Settings_MouseDown(object sender, MouseButtonEventArgs e)
         {
             SettingsWindow settings = new SettingsWindow();
+            settings.ComPortChangedEvent += new EventHandler(comPortChanged);
+            settings.TemperatureLimitChangedEvent += new EventHandler(temperatureChanged);
             settings.Show();
+        }
+
+        private void temperatureChanged(object sender, EventArgs e)
+        {
+            if(ApplicationState.TemperatureLimitEnabled)
+                lblTemperatureLimit.Content = ApplicationState.TemperatureLimit + "°C";
+            else
+                lblTemperatureLimit.Content =  "--";
+        }
+
+        private void comPortChanged(object sender, EventArgs e)
+        {
+            if (ApplicationState.ComPort == null || !ApplicationState.ComPort.Contains("COM")) return;
+            if (serialPort != null)
+                serialPort.Close();
+
+            serialPort = new SerialPort(ApplicationState.ComPort, 9600, Parity.None, 8, StopBits.One);
+            serialPort.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
+            serialPort.Open();
         }
 
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)

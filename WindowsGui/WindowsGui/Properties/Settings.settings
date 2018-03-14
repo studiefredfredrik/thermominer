@@ -2,17 +2,17 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsGui.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="txtUrlForStatusPost" Type="System.String" Scope="User">
+    <Setting Name="txtUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://188.166.126.168:52155</Value>
     </Setting>
-    <Setting Name="txtAddress" Type="System.String" Scope="User">
+    <Setting Name="txtWallet" Type="System.String" Scope="User">
       <Value Profile="(Default)">0xc9415baeE78b36d37fFfb75f3a95c56dE4431508</Value>
     </Setting>
-    <Setting Name="txtMinerName" Type="System.String" Scope="User">
+    <Setting Name="txtRigName" Type="System.String" Scope="User">
       <Value Profile="(Default)">rig1</Value>
     </Setting>
     <Setting Name="temperatureLimit" Type="System.String" Scope="User">
-      <Value Profile="(Default)">25</Value>
+      <Value Profile="(Default)">20</Value>
     </Setting>
   </Settings>
 </SettingsFile>

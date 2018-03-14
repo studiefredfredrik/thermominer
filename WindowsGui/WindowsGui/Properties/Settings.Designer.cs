@@ -12,7 +12,7 @@ namespace WindowsGui.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,42 +26,42 @@ namespace WindowsGui.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://188.166.126.168:52155")]
-        public string txtUrlForStatusPost {
+        public string txtUrl {
             get {
-                return ((string)(this["txtUrlForStatusPost"]));
+                return ((string)(this["txtUrl"]));
             }
             set {
-                this["txtUrlForStatusPost"] = value;
+                this["txtUrl"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0xc9415baeE78b36d37fFfb75f3a95c56dE4431508")]
-        public string txtAddress {
+        public string txtWallet {
             get {
-                return ((string)(this["txtAddress"]));
+                return ((string)(this["txtWallet"]));
             }
             set {
-                this["txtAddress"] = value;
+                this["txtWallet"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("rig1")]
-        public string txtMinerName {
+        public string txtRigName {
             get {
-                return ((string)(this["txtMinerName"]));
+                return ((string)(this["txtRigName"]));
             }
             set {
-                this["txtMinerName"] = value;
+                this["txtRigName"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
         public string temperatureLimit {
             get {
                 return ((string)(this["temperatureLimit"]));

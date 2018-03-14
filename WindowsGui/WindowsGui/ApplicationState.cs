@@ -13,5 +13,11 @@
         public static decimal? CurrentTemperature;
         public static decimal? CurrentHashrate;
 
+        public static string EthminerFilePath;
+        public static string EthminerBatFilePath;
+        public static string EthminerDir;
+
+        public static string ComPort;
+
     }
 }
