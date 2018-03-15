@@ -12,6 +12,8 @@ It also features a webinterface where users can view current temperature
 and hasrate with graphs.
 
 # Overview
+![overview](https://github.com/studiefredfredrik/thermominer/blob/master/overview.PNG?raw=true "overview")
+
 The repo consists of 3 projects:
 
 ## ArduinoTemperatureSensor
